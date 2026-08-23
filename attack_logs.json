@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-08-23 23:40:19",
+    "attack_type": "Data Deletion/System Sabotage",
+    "matched_keyword": "SYSTEM_CLEANSED",
+    "harness_action": "Redacted, Sanitized & Neutralized (0 files damaged, 0 keys exfiltrated)"
+  },
+  {
+    "timestamp": "2026-08-23 23:43:34",
+    "attack_type": "Data Leakage/Exfiltration",
+    "matched_keyword": "API_LEAKED",
+    "harness_action": "Redacted, Sanitized & Neutralized (0 files damaged, 0 keys exfiltrated)"
+  }
+]

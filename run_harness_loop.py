@@ -110,7 +110,7 @@ def main():
     
     print_header("🪓 B2B TOOL POISONING DEFENDER & SAFETY HOOK LOOP 🪓", CYAN)
     print(f"{BLUE}{BOLD}Auditor: Zia Khan (Director, GIAIC IT Institute) -> azmataliakbar@gmail.com{RESET}")
-    print(f"{GREEN}{BOLD}Inbox Bot: Wahiba Kiran (Outer Harness specialist) -> {GIRL_EMAIL}{RESET}")
+    print(f"{GREEN}{BOLD}HP Security Specialist: Wahiba Kiran (Harness Specialist) -> {GIRL_EMAIL}{RESET}")
     
     print("\nInitializing fresh safety database, loading guardrails, and clearing caches...")
     clean_state_files()
@@ -192,7 +192,7 @@ def main():
     with open(STATE_FILE, "r") as f:
         final_state = json.load(f)
         
-    print_header("🎉 B2B PROPTECH LEASE SCREENING & GATED CONTRACT LOOP COMPLETED! 🎉", GREEN)
+    print_header("🎉 B2B TOOL POISONING DEFENDER & AUDIT LOOP COMPLETED! 🎉", GREEN)
     print("Execution Results Summary:")
     print("----------------------------------------------------")
     print(f"Auditing Gated Status: {final_state.get('status')}")

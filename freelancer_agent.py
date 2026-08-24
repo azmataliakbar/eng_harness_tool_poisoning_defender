@@ -141,7 +141,7 @@ def generate_concierge_reply(progress_file, incoming_body, stage, matched_keywor
     return response.text.strip()
 
 def run_seller_beat(progress_file, recipient_email):
-    print(f"\n\033[92m👸 --- [Wahiba Kiran (Concierge) OODA Beat: {progress_file}] ---\033[0m")
+    print(f"\n\033[92m👸 --- [Wahiba Kiran (Security Specialist) OODA Beat: {progress_file}] ---\033[0m")
     
     state = load_progress(progress_file)
     if not state:
@@ -156,11 +156,11 @@ def run_seller_beat(progress_file, recipient_email):
     attacks = state.get('attacks_detected', 0)
     
     if status == 'APPROVED_CLOSED':
-        print("Concierge: Travel booking has been approved, signed, and closed! No further actions.")
+        print("Security Specialist: GIAIC security audit has been approved, signed, and certified! No further actions.")
         return True
 
     if status != 'AWAITING_REPLY':
-        print(f"Concierge: Status is '{status}', not 'AWAITING_REPLY'. Zia's turn.")
+        print(f"Security Specialist: Status is '{status}', not 'AWAITING_REPLY'. Zia's turn.")
         return True
 
     # Connect to Gmail with execute_with_retry wrapping profile requests
@@ -264,11 +264,6 @@ def run_seller_beat(progress_file, recipient_email):
     })
 
     # ----------------------------------------------------
-    # RUN SAFETY HOOK INTERCEPTOR (before_tool_run)
-    # ----------------------------------------------------
-    sanitized_body, matched_word, attack_detected = run_safety_hook(latest_zia_msg['body'])
-    
-    # ----------------------------------------------------
     # STATE-DRIVEN BOOKING ROUTING
     # ----------------------------------------------------
     has_proposed = any(h.get('type') == 'SCALED_DOWN_PROPOSAL_OFFER' for h in history)
@@ -324,8 +319,8 @@ def run_seller_beat(progress_file, recipient_email):
             return False
             
     elif has_escalated:
-        # Turn 6: Zia is holding for review. Play Booking Manager!
-        print("\n\033[96m👔 SENIOR PROPERTY MANAGER ACTIVE: Formulating final tenancy contract and requesting signature...\033[0m")
+        # Turn 6: Zia is holding for review. Play Security Officer and deliver contract!
+        print("\n\033[96m👔 SENIOR SECURITY OFFICER ACTIVE: Formulating final security audit report and requesting signature...\033[0m")
         
         reply_body = generate_concierge_reply(progress_file, sanitized_body, stage='MANAGER_APPROVAL')
         subject = "Final Security Audit Report - SEC-DEF-9901"
